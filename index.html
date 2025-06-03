@@ -1,0 +1,275 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Tantuco CTC Login
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h2 {
+      font-family: 'Merriweather', serif;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a.text-orange-600 {
+      color: #f97316;
+    }
+    a.text-orange-600:hover,
+    a.text-orange-600:focus {
+      color: #ea580c;
+      outline: none;
+    }
+     @media screen and (max-width: 640px) {
+      h1 {
+        font-size: 1.5rem; /* Adjusted for mobile */
+      }
+      h2 {
+        font-size: 2rem; /* Adjusted for mobile */
+      }
+      .bg-orange-600 {
+        padding: 1rem; /* Adjusted padding for buttons */
+      }
+    }
+  </style>
+ </head>
+ <body class="bg-white min-h-screen flex flex-col items-center justify-start py-6 px-4 sm:px-6 md:px-8 relative">
+  <header class="w-full max-w-md flex items-center mb-4 md:hidden">
+   <button aria-label="Go back" class="text-black text-lg font-light">
+    <i class="fas fa-arrow-left">
+    </i>
+   </button>
+  </header>
+  <main class="w-full max-w-md flex flex-col items-center md:hidden">
+   <img alt="Logo image showing a modern abstract orange and white geometric shape on a transparent background" class="mb-3 w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36" height="144" src="logo.png" width="144"/>
+   <h1 class="text-xl sm:text-2xl font-serif font-bold mb-1 text-center text-black">
+    Welcome User!
+   </h1>
+   <h2 class="text-2xl sm:text-3xl font-serif font-bold mb-5 text-center text-black">
+    Login
+   </h2>
+   <form class="w-full flex flex-col gap-4" onsubmit="return false;">
+    <input class="border border-gray-900 rounded-xl px-4 py-3 text-black text-base placeholder-gray-500 font-semibold focus:outline-none focus:ring-2 focus:ring-orange-600" id="username" placeholder="Username or Email" type="text"/>
+    <div class="relative">
+     <input class="border border-gray-900 rounded-xl px-4 py-3 pr-12 text-black text-base placeholder-gray-500 font-semibold focus:outline-none focus:ring-2 focus:ring-orange-600 w-full" id="password" placeholder="Password" type="password"/>
+     <button aria-label="Toggle password visibility" class="absolute right-4 top-1/2 -translate-y-1/2 text-green-900 text-xl" id="togglePassword" type="button">
+      <i class="fas fa-eye" id="eyeIcon">
+      </i>
+     </button>
+    </div>
+    <div class="flex justify-between items-center text-sm text-green-900 mb-5">
+     <label class="flex items-center gap-2">
+      <input checked="" class="w-5 h-5 rounded-sm border border-orange-600 bg-orange-600 checked:bg-orange-600 checked:border-orange-600" style="accent-color:#f97316" type="checkbox"/>
+      <span>
+       Remember me
+      </span>
+     </label>
+     <button class="text-black text-sm no-underline" id="forgotPasswordBtn" type="button">
+      Forget Password?
+     </button>
+    </div>
+    <div class="flex items-center text-green-900 text-sm mb-5 w-full">
+     <hr class="flex-grow border-green-900"/>
+     <span class="px-3 text-black">
+      or
+     </span>
+     <hr class="flex-grow border-green-900"/>
+    </div>
+    <div class="flex justify-center gap-6 mb-4">
+     <button aria-label="Login with Google" class="p-0" type="button">
+      <img alt="Google logo black and white circle with stylized G letter" class="h-10 w-10" height="40" src="images/google.png" width="40"/>
+     </button>
+     <button aria-label="Login with Facebook" class="p-0" type="button">
+      <img alt="Facebook logo white f on black circle" class="h-10 w-10" height="40" src="images/facebook.png" width="40"/>
+     </button>
+    </div>
+    <p class="text-center text-sm mb-1 text-black">
+     Don’t have an account?
+     <a class="text-orange-600 font-semibold" href="/register.html">
+      Register
+     </a>
+    </p>
+    <button class="bg-orange-600 text-white text-2xl font-normal rounded-3xl py-4 w-full mb-1" type="submit">
+     Login
+    </button>
+   </form>
+   <p class="mt-0.5 text-green-900 text-sm">
+    <a href="terms.html">
+     Terms &amp; Conditions
+    </a>
+   </p>
+  </main>
+
+  <!-- Desktop view -->
+  <div class="hidden md:flex flex-1 max-w-7xl w-full">
+   <!-- Left side -->
+   <div class="w-1/2 flex flex-col justify-between px-16 py-16 max-w-lg">
+    <header class="flex items-center space-x-3">
+     <img alt="Tantuco CTC logo with orange and black colors" class="w-16 h-16 object-contain" height="64" src="logo.png" width="64"/>
+     <h1 class="text-2xl font-semibold">
+      <span class="text-orange-600 font-bold">
+       Tantuco
+      </span>
+      <span class="text-black">
+       CTC
+      </span>
+     </h1>
+    </header>
+    <main class="mt-20">
+     <p class="text-black font-semibold text-lg mb-2">
+      Welcome User!
+     </p>
+     <h2 class="font-serif text-black font-bold text-6xl mb-10 leading-tight">
+      Login
+     </h2>
+     <form class="space-y-6" onsubmit="return false;">
+      <input class="w-full border border-gray-900 rounded-md px-5 py-4 text-black placeholder-gray-500 font-semibold focus:outline-none focus:ring-2 focus:ring-orange-600" placeholder="Username or Email" required="" type="text"/>
+      <div class="relative">
+       <input class="w-full border border-gray-900 rounded-md px-5 py-4 pr-14 text-black placeholder-gray-500 font-semibold focus:outline-none focus:ring-2 focus:ring-orange-600" placeholder="Password" required="" type="password"/>
+       <button aria-label="Toggle password visibility" class="absolute inset-y-0 right-4 flex items-center text-green-900 text-2xl" tabindex="-1" type="button">
+        <i class="far fa-eye">
+        </i>
+       </button>
+      </div>
+      <div class="flex justify-between items-center text-green-900 text-base font-medium">
+       <label class="flex items-center gap-2">
+        <input checked="" class="w-5 h-5 rounded-sm border border-orange-600 bg-orange-600 checked:bg-orange-600 checked:border-orange-600" style="accent-color:#f97316" type="checkbox"/>
+        <span class="text-black">
+         Remember me
+        </span>
+       </label>
+       <a class="text-black" href="#">
+        Forget Password?
+       </a>
+      </div>
+      <div class="flex items-center my-8 space-x-6 text-green-900 text-base font-semibold">
+       <div class="flex-grow border-t border-green-900">
+       </div>
+       <span class="px-4 text-black">
+        or
+       </span>
+       <div class="flex-grow border-t border-green-900">
+       </div>
+      </div>
+      <div class="flex justify-center space-x-12 text-green-900 text-4xl">
+       <button aria-label="Login with Google" class="focus:outline-none" type="button">
+        <img alt="Google logo black and white circle with stylized G letter" class="h-12 w-12" height="48" src="images/google.png" width="48"/>
+       </button>
+       <button aria-label="Login with Facebook" class="focus:outline-none" type="button">
+        <img alt="Facebook logo white f on black circle" class="h-12 w-12" height="48" src="images/facebook.png" width="48"/>
+       </button>
+      </div>
+      <p class="mt-10 text-black text-base">
+       Don’t have an account?
+       <a class="text-orange-600 font-semibold" href="/register.html">
+        Register
+       </a>
+      </p>
+      <button class="mt-8 w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-5 rounded-md transition-colors text-2xl" type="submit">
+       Login
+      </button>
+     </form>
+    </main>
+    <footer class="flex justify-between text-black text-sm mt-16 pb-4">
+     <p>
+      Copyright © 2024
+      <span class="text-orange-600">
+       Tantuco
+      </span>
+      All rights reserved.
+     </p>
+     <a class="text-black" href="#">
+      Terms &amp; Conditions
+     </a>
+    </footer>
+   </div>
+   <!-- Right side -->
+   <div class="w-1/2 relative">
+    <img alt="Map background with a route line in orange and black, with location icons and a paper plane icon on the route" class="object-cover w-full h-full" height="1024" src="Maps.png" width="800"/>
+    <div class="absolute bottom-20 left-10 max-w-xs">
+     <h3 class="font-serif text-4xl font-bold text-black leading-tight mb-1">
+      “Track.Locate.Deliver”
+     </h3>
+     <p class="font-semibold text-black mb-4">
+      — Tantuco
+     </p>
+     <div class="flex space-x-1">
+      <span class="block w-6 h-1 rounded-full bg-black">
+      </span>
+      <span class="block w-6 h-1 rounded-full bg-orange-600">
+      </span>
+      <span class="block w-6 h-1 rounded-full bg-black">
+      </span>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm hidden z-50 flex items-center justify-center" id="overlay">
+   <div class="bg-white rounded-lg p-5 w-11/12 max-w-xs shadow-lg">
+    <h3 class="text-lg font-semibold mb-3 text-center text-black">
+     Forgot Password
+    </h3>
+    <p class="mb-3 text-center text-gray-700 text-sm">
+     Please enter your email address and phone number to reset your password.
+    </p>
+    <input aria-label="Email for password reset" class="w-full border border-gray-400 rounded-md px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-orange-600 text-sm" placeholder="Email address" type="email"/>
+    <input aria-label="Phone number for password reset" class="w-full border border-gray-400 rounded-md px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-orange-600 text-sm" placeholder="Phone number" type="tel"/>
+    <div class="flex justify-end gap-3">
+     <button class="px-3 py-1.5 rounded-md bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold text-sm" id="cancelBtn" type="button">
+      Cancel
+     </button>
+     <button class="px-3 py-1.5 rounded-md bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm" type="button">
+      Submit
+     </button>
+    </div>
+   </div>
+  </div>
+
+  <script>
+   const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+    const forgotPasswordBtn = document.getElementById('forgotPasswordBtn');
+    const overlay = document.getElementById('overlay');
+    const cancelBtn = document.getElementById('cancelBtn');
+
+    togglePassword.addEventListener('click', () => {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      if (type === 'text') {
+        eyeIcon.classList.remove('fa-eye');
+        eyeIcon.classList.add('fa-eye-slash');
+      } else {
+        eyeIcon.classList.remove('fa-eye-slash');
+        eyeIcon.classList.add('fa-eye');
+      }
+    });
+
+    forgotPasswordBtn.addEventListener('click', () => {
+      overlay.classList.remove('hidden');
+      overlay.setAttribute('aria-hidden', 'false');
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      overlay.classList.add('hidden');
+      overlay.setAttribute('aria-hidden', 'true');
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.add('hidden');
+        overlay.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+ </body>
+</html>
